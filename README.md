@@ -37,7 +37,7 @@ print.gxetest=function(m) {
     cat("    Reverse Test for GxE Interaction\n")
     model="ordinary linear regression"
   } else if (m$method=="logistic") {
-    cat("Logistic Regression Test for GxE Interaction\n")
+    cat("    Logistic Regression Test for GxE Interaction\n")
     model="logistic regression"
   }
   cat(paste("Dataset: ",m$dataset),"\n")
