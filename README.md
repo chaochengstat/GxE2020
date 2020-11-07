@@ -4,7 +4,7 @@ The **reverse test** is a statistial approach to test the interaction effect bet
 
 ## Required Software
 
-R software (http://www.r-project.org/). No additional R packages are required.
+`R` software (http://www.r-project.org/) and `skedastic` package (https://cran.r-project.org/web/packages/skedastic/index.html).
 
 ## R functions
 
