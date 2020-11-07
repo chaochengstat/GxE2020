@@ -73,7 +73,7 @@ We now use an example to illustrate the usage of the `gxe.test` function. First,
 5 -1.9470882  1  2.2713262 1 1
 6 -0.3435955  1  2.6412762 1 1
 ```
-This simulated dataset can be found in this github folder, which has 2000 observations and 5 variables, including a continuous exposure (`X`), a binary outcome (`D`), an ordinal genetic variate (`G`), as well as two confounding variables (`Z1` and `Z2`). Now we conduct a reverse examine to whether the genetic variant `G` modifies `X`-`D` association. See the code below
+This simulated dataset can be found in this github folder, which has 2000 observations and 5 variables, including a continuous exposure (`X`), a binary outcome (`D`), an ordinal genetic variate (`G`), as well as two confounding variables (`Z1` and `Z2`). Now we conduct a reverse examine to whether the genetic variant `G` modifies `X`-`D` association, adjusting for both of confounders. See the code below
 ```
 > t.reverse=gxe.test(outcome="D",
                      exposure="X",
@@ -88,3 +88,27 @@ Model:  ordinary linear regression
 Formula:  X ~ D + G + I(G * D) + Z1 + Z2 
 Chi-squared statistic:  6.984665  P-value:  0.008221106
 ```
+It is exhibited that the P-value by the reverse test is `0.008`, so we can reject the null hypothesis that there is no gene-environment interaction effect under a 1% significance level. 
+
+If the error term in the linear regression model used in reverse test follows a constant variance normal distribution, we can calculate the Ratio of Odds Ratio (ROR), which is a metric representing the magnitude of the gene-environment interaction effect. Now we applied Shapiro-Wilk test and White test to check for the normality and homoscedasticity requirements, respectively. At first, we conduct a Shapiro-Wilk test for the residuals of the linear regression model.
+```
+> shapiro.test(t.reverse$model$residuals)
+	Shapiro-Wilk normality test
+
+data:  t.reverse$model$residuals
+W = 0.99929, p-value = 0.6658
+```
+The P-value larger than 5%, so we assume the normality requirement holds. Second, we conduct a White test to check for the homoscedasticity assumption.
+```
+> skedastic::white_lm(t.reverse$model,statonly=F)
+# A tibble: 1 x 5
+  statistic p.value parameter method       alternative
+      <dbl>   <dbl>     <dbl> <chr>        <chr>      
+1      16.1  0.0965        10 White's Test greater    
+```
+The P-value is 9.7%, which is larger than 5%, so we assume the homoscedasticity requirement hold. Now we calculate the ROR based on the reverse approach
+```
+> exp(t.reverse$model$coefficients[4]/var(t.reverse$model$residuals))
+[1] 1.185986
+```
+The ROR obtained by the reverse test is 1.186. 
