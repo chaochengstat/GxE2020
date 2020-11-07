@@ -46,3 +46,30 @@ print.gxetest=function(m) {
   cat("Chi-squared statistic: ",m$Chi2.stat," P-value: ",m$P.value,"\n")
 }
 ```
+
+The gene-environment test can be called with
+```
+gxe.test(outcome=,exposure=,gene=,confounders=,data=,method=)
+```
+The function has 6 arguments. These are
+* `outcome=` (Required) Name of the outcome variable, which should be a binary datatype.
+* `exposure=` (Required) Name of the exposure variable, which should be a continuous datatype.
+* `gene=` (Required) Name of the genetic variant, which can be binary or ordinal.
+* `confounders=` (Optional) A vector of names showing the confounding variables used in the gene-environment regression model. The default value is `NULL`, which represents no confounding variables. 
+* `data=` (Required) The name of the dataset, which should be a `data.frame`.
+* `method=` (Optional) `"reverse"` for the reverse test, `"logistic"` for the standard logistic regression test.
+
+## Illustrative Example
+
+We now use an example to illustrate the usage of the `gxe.test` function. First, we read the `gxe_simulate.csv` dataset
+```
+mydata=read.csv("gxe_simulate.csv")[,-1]
+head(mydata)
+          Z1 Z2          X G D
+1 -0.5622591  1  0.2316188 1 1
+2  0.6080418  1 -0.0249439 1 1
+3 -0.1744747  1  1.7729779 2 1
+4 -0.7125421  0  0.5858684 0 1
+5 -1.9470882  1  2.2713262 1 1
+6 -0.3435955  1  2.6412762 1 1
+```
