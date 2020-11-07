@@ -63,8 +63,8 @@ The function has 6 arguments. These are
 
 We now use an example to illustrate the usage of the `gxe.test` function. First, we read the `gxe_simulate.csv` dataset
 ```
-mydata=read.csv("gxe_simulate.csv")[,-1]
-head(mydata)
+> mydata=read.csv("gxe_simulate.csv")[,-1]
+> head(mydata)
           Z1 Z2          X G D
 1 -0.5622591  1  0.2316188 1 1
 2  0.6080418  1 -0.0249439 1 1
@@ -72,4 +72,19 @@ head(mydata)
 4 -0.7125421  0  0.5858684 0 1
 5 -1.9470882  1  2.2713262 1 1
 6 -0.3435955  1  2.6412762 1 1
+```
+This simulated dataset can be found in this github folder, which has 2000 observations and 5 variables, including a continuous exposure (`X`), a binary outcome (`D`), an ordinal genetic variate (`G`), as well as two confounding variables (`Z1` and `Z2`). Now we conduct a reverse examine to whether the genetic variant `G` modifies `X`-`D` association. See the code below
+```
+> t.reverse=gxe.test(outcome="D",
+                     exposure="X",
+                     gene="G",
+                     confounders=c("Z1","Z2"),
+                     data=mydata,
+                     method="reverse")
+> t.reverse
+    Reverse Test for GxE Interaction
+Dataset:  mydata 
+Model:  ordinary linear regression 
+Formula:  X ~ D + G + I(G * D) + Z1 + Z2 
+Chi-squared statistic:  6.984665  P-value:  0.008221106
 ```
