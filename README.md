@@ -98,7 +98,7 @@ It is exhibited that the P-value by the reverse test is `0.008`, so we can rejec
 data:  t.reverse$model$residuals
 W = 0.99929, p-value = 0.6658
 ```
-The P-value larger than 5%, so we assume the normality requirement holds. Second, we conduct a White test to check for the homoscedasticity assumption.
+The P-value is larger than 5%, so we assume the normality requirement holds. Second, we conduct a White test to check for the homoscedasticity assumption.
 ```
 > skedastic::white_lm(t.reverse$model,statonly=F)
 # A tibble: 1 x 5
