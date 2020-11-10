@@ -1,9 +1,11 @@
 setwd("/gpfs/ycga/project/wang_zuoheng/cc2747/VACS/simulation/plot")
 library(foreach)
 library(doMC)
+library(doRNG)
 library(sn)
 test.fun = function(rho=1,P_1000=0.05, alpha_g=log(1.5), alpha_x=log(1.5), alpha_gx=log(1.2),
                     Cor_XZ1=0.1, Cor_XZ2=0.1, Cor_XG=0.3) {
+  #rho=1;P_1000=0.05; alpha_g=log(1.5); alpha_x=log(1.5); alpha_gx=log(1.2)
   #Cor_XZ1=0.2; Cor_XZ2=0.1; Cor_XG=0.3
   ## NO of individuals in the whole cohort study
   N  = 30000
