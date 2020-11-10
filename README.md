@@ -1,4 +1,4 @@
-# A turtorial for implementation of the **reverse test** to test gene-environment interaction effects in R software
+# A turtorial for implementing the **reverse test** to test gene-environment interaction effects in R software
 
 The **reverse test** is a statistial approach to test the interaction effect between a genetic variant and a continuous environmental exposure on a binary disease outcome.
 
