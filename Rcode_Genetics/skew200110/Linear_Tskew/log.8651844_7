@@ -1,0 +1,36 @@
+-------------------------------
+/gpfs/ycga/project/wang_zuoheng/cc2747/VACS/skew200110/Linear_Tskew
+Running on host c25n07.ruddle.hpc.yale.internal
+Time is Sun Jan 12 02:27:40 EST 2020
+SLURM_NODES are c25n07
+-------------------------------
+
+
+
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: rngtools
+Loading required package: pkgmaker
+Loading required package: registry
+
+Attaching package: ‘pkgmaker’
+
+The following object is masked from ‘package:base’:
+
+    isFALSE
+
+Loading required package: stats4
+
+Attaching package: ‘sn’
+
+The following object is masked from ‘package:stats’:
+
+    sd
+
+[1] "2020-01-12 02:27:44 EST"
+[1] "NO. 19 and 2020-01-12 11:39:11"
+[1] 0.050946 0.050260 0.050162 0.050620 0.053276 0.049780 0.050120 0.049930
+[1] "NO. 20 and 2020-01-12 20:56:00"
+[1] 0.049940 0.049192 0.049882 0.049760 0.055284 0.049930 0.050184 0.049844
+[1] "NO. 21 and 2020-01-13 06:27:14"
+[1] 0.051840 0.050570 0.050488 0.050284 0.061786 0.049622 0.050410 0.050258

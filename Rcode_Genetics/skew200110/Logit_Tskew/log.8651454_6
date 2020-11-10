@@ -1,0 +1,34 @@
+-------------------------------
+/gpfs/ycga/project/wang_zuoheng/cc2747/VACS/skew200110/Logit_Tskew
+Running on host c15n03.ruddle.hpc.yale.internal
+Time is Fri Jan 10 21:52:30 EST 2020
+SLURM_NODES are c15n03
+-------------------------------
+
+
+
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: rngtools
+Loading required package: pkgmaker
+Loading required package: registry
+
+Attaching package: ‘pkgmaker’
+
+The following object is masked from ‘package:base’:
+
+    isFALSE
+
+Loading required package: stats4
+
+Attaching package: ‘sn’
+
+The following object is masked from ‘package:stats’:
+
+    sd
+
+[1] "2020-01-10 21:52:33 EST"
+[1] "NO. 16 and 2020-01-10 21:53:05"
+Error in print(res[i, ]) : object 'res' not found
+Execution halted
+srun: error: c15n03: task 0: Exited with exit code 1

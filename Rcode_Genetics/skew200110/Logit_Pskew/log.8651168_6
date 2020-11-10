@@ -1,0 +1,39 @@
+-------------------------------
+/gpfs/ycga/project/wang_zuoheng/cc2747/VACS/skew200110/Logit_Pskew
+Running on host c23n09.ruddle.hpc.yale.internal
+Time is Fri Jan 10 16:50:02 EST 2020
+SLURM_NODES are c23n09
+-------------------------------
+
+
+
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: rngtools
+Loading required package: pkgmaker
+Loading required package: registry
+
+Attaching package: ‘pkgmaker’
+
+The following object is masked from ‘package:base’:
+
+    isFALSE
+
+Loading required package: stats4
+
+Attaching package: ‘sn’
+
+The following object is masked from ‘package:stats’:
+
+    sd
+
+[1] "2020-01-10 16:50:04 EST"
+[1] "NO. 16 and 2020-01-10 17:11:25"
+[1] 0.9733199 0.9662682 0.9452115 0.9199673 0.7132938 0.8053247 0.8799144
+[8] 0.9294015
+[1] "NO. 17 and 2020-01-10 17:31:44"
+[1] 0.9684547 0.9917757 1.0081975 1.0173528 0.7550628 0.8641315 0.9516743
+[8] 1.0096913
+[1] "NO. 18 and 2020-01-10 17:52:19"
+[1] 0.9233802 0.9262585 0.9227698 0.9181146 0.6998556 0.7916652 0.8609771
+[8] 0.9101253

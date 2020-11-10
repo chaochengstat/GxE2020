@@ -1,0 +1,37 @@
+-------------------------------
+/gpfs/ycga/project/wang_zuoheng/cc2747/VACS/skew200110/Linear_Pskew
+Running on host c16n03.ruddle.hpc.yale.internal
+Time is Sat Jan 11 16:37:13 EST 2020
+SLURM_NODES are c16n03
+-------------------------------
+
+
+
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: rngtools
+Loading required package: pkgmaker
+Loading required package: registry
+
+Attaching package: ‘pkgmaker’
+
+The following object is masked from ‘package:base’:
+
+    isFALSE
+
+Loading required package: stats4
+
+Attaching package: ‘sn’
+
+The following object is masked from ‘package:stats’:
+
+    sd
+
+[1] "2020-01-11 16:37:16 EST"
+[1] "NO. 4 and 2020-01-11 16:38:24"
+[1] 1.0681038 1.0307818 0.9796715 0.9205146 1.0519134 1.0604737 1.0417731
+[8] 0.9936761
+[1] "NO. 5 and 2020-01-11 16:39:31"
+[1] 1.138746 1.145275 1.125697 1.086999 1.108603 1.152118 1.163504 1.132551
+[1] "NO. 6 and 2020-01-11 16:40:40"
+[1] 1.085480 1.074749 1.046491 1.001268 1.000356 1.057400 1.084264 1.072657
