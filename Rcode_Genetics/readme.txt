@@ -23,4 +23,5 @@ This folder includes the R codes for simulation studies in Scenario I where the 
 
 4, Subfolder “VACS”
 This folder contains the R codes for implementing the illustrative VACS data example.
-“spline200117.R”: codes for Table 5 and Figure 2.
+“spline200117.R”: codes for implementing the reverse test and logistic regression test for the VACS dataset.
+“summary_multi2.R”: codes for generating Table 5 and Figure 2.
