@@ -138,4 +138,4 @@ This is also very close to the ROR obtained by the reverse approach (1.186).
 ## Reference(s)
 
 Chao Cheng, Donna Spiegelman, Zuoheng Wang, and Molin Wang. Testing Gene-Environment Interactions in the Presence of Confounders and Mismeasured Environmental
-Exposures. Submitted to *Genetics*.
+Exposures. *G3: Genes, Genomes, Genetics* (To appear).
